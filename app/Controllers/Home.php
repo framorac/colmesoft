@@ -6,7 +6,7 @@ use \Core\Controller as Controller;
 class Home extends Controller {
 	
 	public function index(){
-		$usuarios = new \App\Models\Usuario();
+		$usuarios = new \App\Models\Usuario;
 		
 		$data = [
 			'usuarios' => $usuarios->getAll()
