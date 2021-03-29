@@ -6,7 +6,9 @@
     "authors": [
         {
             "name": "Francisco Mora",
-            "email": "francisco.m.collao@gmail.com"
+            "email": "francisco.m.collao@gmail.com",
+            "rol": "Developer",
+            "homepage": "https://www.franciscomora.cl"
         }
     ],
     "minimum-stability": "alpha",
