@@ -1,3 +1,11 @@
 <?php $this->layout('layout', ['titulo' => 'Home']) ?>
 
 <h1>Welcome!</h1>
+
+<?php 
+foreach($data as $usuario)
+{
+	echo "user_name:" . $usuario["nombre"] . " email:" . $usuario["email"] . "<br/>";
+
+}
+?>

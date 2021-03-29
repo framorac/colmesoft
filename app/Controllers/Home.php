@@ -6,6 +6,12 @@ use \Core\Controller as Controller;
 class Home extends Controller {
 	
 	public function index(){
-		echo $this->plantilla->render('home/home');
+		$usuarios = new \App\Models\Usuario();
+		
+		$data = [
+			'usuarios' => $usuarios->getAll()
+		];
+		
+		echo $this->plantilla->render('home/home', $data);
 	}
 }
