@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es_CL">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>COLMESOFT :: Login</title>
+<link rel="stylesheet" href="/css/bulma.min.css" />
+<link rel="stylesheet" href="/css/lineicons/WebFont/font-css/LineIcons.css" />
+</head>
+<body>
+<div class="hero is-fullheight is-primary">
+	<div class="hero-head">
+		<div class="container has-text-centered">
+			<div class="column is-4 is-offset-4">
+				<div class="is-flex is-justify-content-center">
+					<figure class="image is-128x128">
+					  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
+					</figure>
+				</div>				
+				<hr class="login-hr" />
+				<div class="box">
+					<form action="/login" method="POST">
+						<div class="field">
+							<div class="control has-icons-left">
+								<input class="input is-large" type="email" placeholder="Email..." />
+								<span class="icon is-left">
+									<i class="lni lni-envelope"></i>
+								</span>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control has-icons-left">
+								<input class="input is-large" type="password" placeholder="Contrase&ntilde;a..." />
+								<span class="icon is-left">
+									<i class="lni lni-unlock"></i>
+								</span>
+							</div>
+						</div>
+					</form>
+					<br />
+					<button class="button is-block is-danger is-large is-fullwidth">LOGIN</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="/js/scripts.js"></script>
+<!-- SCRIPTS -->
+</body>
+</html>
