@@ -4,10 +4,10 @@ namespace App\Models;
 use \Core\Model as Model;
 
 class Usuario extends Model {
-	
+
 	public function getAll(){
-		$usuarios = $this->db->query('SELECT * FROM usuarios');
-		
+		$usuarios = $this->db->query('SELECT * FROM usuario');
+
 		return $usuarios;
 	}
 }
