@@ -2,16 +2,11 @@
 
 namespace App\Controllers;
 use \Core\Controller as Controller;
+use \App\Models\Usuario as Usuario;
 
 class Home extends Controller {
 	
 	public function index(){
-		$usuarios = new \App\Models\Usuario;
-		
-		$data = [
-			'usuarios' => $usuarios->getAll()
-		];
-		
-		echo $this->plantilla->render('home/home', $data);
+		echo $this->plantilla->render('home/home');
 	}
 }
