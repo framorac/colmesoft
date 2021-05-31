@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use \Core\Controller as Controller;
+use \App\Models\Usuario as Usuario;
 
 class Login extends Controller {
 	
