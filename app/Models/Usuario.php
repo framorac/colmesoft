@@ -13,10 +13,10 @@ class Usuario extends Model {
 		return $usuarios;
 	}
 
-	public function add(){
+	public function crear(){
 		$sql = "INSERT INTO usuario (ID_ROL,RUN,NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,EMAIL,PASSWORD,ESTADO) 
 				VALUES (?,?,?,?,?,?,?,?)";
-		$stmt = $this->db->prepare($sql);
+		$stm = $this->db->prepare($sql);
 
 		$rol = 1;
 		$run = "1-9";
@@ -25,19 +25,24 @@ class Usuario extends Model {
 		$sApellido = "Doe";
 		$email = "doe@doe.com";
 		$password = password_hash("test", PASSWORD_DEFAULT);
-		$estado = "INACTIVO";
+		$estado = "ACTIVO";
 
-		$stmt->bindParam(1, $rol);
-		$stmt->bindParam(2, $run);
-		$stmt->bindParam(3, $nombre);
-		$stmt->bindParam(4, $pApellido);
-		$stmt->bindParam(5, $sApellido);
-		$stmt->bindParam(6, $email);
-		$stmt->bindParam(7, $password);
-		$stmt->bindParam(8, $estado);
+		$stm->bindParam(1, $rol);
+		$stm->bindParam(2, $run);
+		$stm->bindParam(3, $nombre);
+		$stm->bindParam(4, $pApellido);
+		$stm->bindParam(5, $sApellido);
+		$stm->bindParam(6, $email);
+		$stm->bindParam(7, $password);
+		$stm->bindParam(8, $estado);
 
-		$inserted = $stmt->execute();
+		$inserted = $stm->execute();
 
 		return $inserted;
+	}
+
+	private function validarUsuario($email, $password){
+		$sql = "SELECT email,password FROM usuario WHERE email=? AND password=?";
+		$stm = $this->db->prepare($sql);
 	}
 }

@@ -6,7 +6,7 @@ class Controller {
 	protected $plantilla;
 	
 	public function __construct(){
-	$this->plantilla = new \League\Plates\Engine(dirname(__DIR__) . '/app/Views');
+		$this->plantilla = new \League\Plates\Engine(dirname(__DIR__) . '/app/Views');
 		$this->plantilla->setFileExtension('phtml');
 	}
 	

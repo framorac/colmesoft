@@ -10,7 +10,6 @@ class Home extends Controller {
 		
 		$data = [
 			'usuarios' => $usuarios->getAll(),
-			'status' => $usuarios->add()
 		];
 
 		echo $this->plantilla->render('home/home', $data);
