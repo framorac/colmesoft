@@ -41,8 +41,11 @@ class Usuario extends Model {
 		return $inserted;
 	}
 
-	private function validarUsuario($email, $password){
+	public function validarUsuario($email, $password){
+		$usuarioValido = true;
 		$sql = "SELECT email,password FROM usuario WHERE email=? AND password=?";
 		$stm = $this->db->prepare($sql);
+
+		return $usuarioValido;
 	}
 }

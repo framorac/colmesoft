@@ -11,19 +11,18 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-4 is-half is-offset-one-quarter mt-6">
-				<form action="/login" method="post" class="box" id="formLogin">
+				<form action="/login" method="post" class="box" id="formLogin" enctype="multipart/form-data">
 					<h1 class="title has-text-centered has-text-black">COLMESOFT</h1>
-					<div class="notification is-danger is-light">Lorem</div>
-					<div class="field">
+					<div class="field" id="campoEmail">
 						<label class="label" for="email">Email:</label>
 						<div class="control has-icons-left">
-							<input type="email" class="input" id="email" name="email" placeholder="email@algo.com" />
+							<input type="email" class="input" id="email" name="email" placeholder="email@algo.com" autofocus="autofocus" />
 							<span class="icon is-left">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
 							</span>
 						</div>
 					</div>
-					<div class="field">
+					<div class="field" id="campoPassword">
 						<label for="password" class="label">Contrase&ntilde;a:</label>
 						<div class="control has-icons-left">
 							<input type="password" class="input" id="password" name="password" />
@@ -33,7 +32,7 @@
 							<input type="hidden" name="csrf" id="csrf" value="<?=$_SESSION['token']?>" />
 						</div>
 					</div>
-					<button class="button is-primary is-fullwidth" type="submit">INGRESAR</button>
+					<button class="button is-primary is-fullwidth" id="btnLogin" type="submit">INGRESAR</button>
 				</form>
 			</div>
 		</div>

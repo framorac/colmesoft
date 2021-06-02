@@ -19,16 +19,28 @@ form.addEventListener('submit', function(event){
 
   const fetchOptions = {
     method: form.method,
+    credentials: "include",
     headers: {
-      "Content-type": "application/json;charset=UTF-8",
-      "Accept": "application/json"
+      "Accept": "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
     },
-    body: JSON.stringify(datos)
+    body: JSON.stringify(Object.fromEntries(datos))
   }
 
   fetch(url, fetchOptions)
   .then(response => response.json())
   .then(data => {
     console.log(data);
+    if (data.status === 'Token Expired') {
+      console.log(data.status);
+    } else if(data.status === 'Datos NOK'){
+      console.log(data.status);
+    }else if(data.status === 'Usuario OK'){
+      setTimeout('redirigir()', 1000);
+    }
   });
 }); 
+
+function redirigir(){
+  window.location.href = "/admin";
+}
