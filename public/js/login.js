@@ -36,7 +36,7 @@ form.addEventListener('submit', function(event){
     } else if(data.status === 'Datos NOK'){
       console.log(data.status);
     }else if(data.status === 'Usuario OK'){
-      setTimeout('redirigir()', 1000);
+      setTimeout(redirigir(), 2000);
     }
   });
 }); 
